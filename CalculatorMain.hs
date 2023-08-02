@@ -1,5 +1,5 @@
 import Data.Char
-import ExpressionParser
+--import ExpressionParser
 main = do
     putStrLn "\n\
     \   ▄█    █▄       ▄████████    ▄████████  ▄████████    ▄████████  ▄█        ▄████████ \n\

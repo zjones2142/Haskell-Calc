@@ -11,10 +11,29 @@ num = do
     n <- many1 digit
     return (read n)
 
-var :: Parser String
-var = do
-    x <- many1 letter
-    return (read x)
+--var :: Parser String
+--var = do
+--    x <- many1 letter
+--    return (read x)
+
+expr = do 
+    x <- term
+    char '+'
+    y <- expr
+    return (x+y)
+    <|> term
+
+term = do 
+    x <- factor
+    char '*'
+    y <- term
+    return (x*y) <|> factor
+
+factor = do
+    char '('
+    x <- expr
+    char ')'
+    return x <|> num
 
 --evaluate :: (a -> b) -> b
 --evaluate = 
