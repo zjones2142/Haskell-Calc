@@ -34,6 +34,3 @@ factor = do
     x <- expr
     char ')'
     return x <|> num
-
---evaluate :: (a -> b) -> b
---evaluate = 
