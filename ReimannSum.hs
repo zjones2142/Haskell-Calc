@@ -21,3 +21,6 @@ reimann f x (a,b) = approximation --f is function, dx is number of rectangles, r
           xs = take x (genXs (a,b) c)
           ys = map f xs
           c = (b - a) / fromIntegral x
+
+--derive :: (Double -> Double) -> (Double -> Double)
+--derive f = 
